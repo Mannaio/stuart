@@ -7,5 +7,15 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-  <h1 data-module="example">Hello World!</h1>
+  <div class="background">
+    {% include "layouts/video.html" %}
+    {% include "layouts/header.html" %}
+    {% include "layouts/menu.html" %}
+    <section class="background__section">
+      <h1 class="background__title">Deliver Fast, Pay Less</h1>
+      <h2 class="background__title">On-Demand, delivery for business</h2>
+      <button class="background__button">Get Started</button>
+    </section>
+  </div>
+  {% include "layouts/maincontent.html" %}
 {% endblock %}

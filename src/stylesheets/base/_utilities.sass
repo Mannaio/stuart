@@ -1,0 +1,41 @@
+// Utilities
+
+.iOS
+  display: none
+  margin-top: 5px
+  @include sprite(14px, 24px, -61px -5px)
+  @include respond-to($breakpoint-for-desktop)
+    margin: 0 10px 0 0
+
+.arrow
+  @include arrow()
+
+.more
+  @include sprite(15px, 27px, -27px 6px)
+  position: absolute
+  left: 55px
+  top: -1px
+  &:hover
+    .subnav
+      display: block
+
+.details
+  color: $medium-grey
+
+.info
+  color: $blue
+  display: block
+  @include respond-to($breakpoint-for-desktop)
+    display: inline
+  &:after
+    content: ''
+    display: inline-block
+    @include sprite(10px, 9px, -2px -45px)
+
+.-showDesktop
+  @include respond-to($breakpoint-for-desktop)
+    display: inline-block
+
+.-hideDesktop
+  @include respond-between(0, $breakpoint-for-desktop)
+    display: block

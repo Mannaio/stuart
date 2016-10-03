@@ -1,0 +1,40 @@
+$maincontent-width: 200px
+$maincontent-block-padding: 10px
+
+.maincontent
+  text-align: center
+  padding: $global-padding
+  &__block,
+    display: flex
+    align-items: center
+    flex-direction: row
+    justify-content: center
+    padding: $maincontent-block-padding
+    &:first-child
+      flex-direction: column
+  &__desktop
+      text-align: left
+      width: 340px
+      margin-left: 10px
+      font-size: 14px
+      display: none
+      @include respond-to($breakpoint-for-desktop)
+        display: block
+  &__sme,
+  &__corporate,
+    color: $normal-grey
+    font-weight: normal
+    font-size: $global-size
+    background-size: cover
+    width: $maincontent-width
+    @include respond-to($breakpoint-for-desktop)
+      width: 350px
+      height: 150px
+  &__sme
+      background-image: url('../images/sme-photo.jpg')
+      border: 1px solid $normal-grey
+  &__corporate
+      background-image: url('../images/corporate-photo.jpg')
+  &__mobile
+    @include respond-to($breakpoint-for-desktop)
+      visibility: hidden

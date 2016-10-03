@@ -1,0 +1,23 @@
+.background
+  background-image: url('../images/hero-background-photo.jpg')
+  background-size: cover
+  background-position: left
+  background-repeat: no-repeat
+  min-height: 500px
+  color: white
+  position: relative
+  overflow: hidden
+  @include respond-to($breakpoint-for-desktop)
+    background-image: none
+  &__section
+    margin: 100px auto
+    width: 305px
+  &__title,
+  &__button
+    text-align: center
+    font-weight: lighter
+  &__button
+    @include button(16px, 18px, 10px, 10px, 10px, 10px)
+    display: block
+    width: 255px
+    margin: 0 auto
